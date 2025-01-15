@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comprovador de Notes</h1>
+    <p>Introdueix la nota (0-10):</p>
+    <input id="nota" type="number">
+    <button onclick="Resultat()">Comprova</button>
+
+
+    <script>
+        var nota;
+        nota = document.getElementById("nota");
+        function Resultat()
+        {
+            if(nota < 5){
+                alert("Aprovat");
+            }   
+            else{
+                alert("Suspés");
+            }
+                
+        }
+        
+
+
+    
+    </script>
+</body>
+
+
+
+</html>
