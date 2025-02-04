@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div>
+        <div id="mostrar"></div> 
+    </div>
+       
+
+
+<style>
+    body{
+        background-color: aqua;
+    }
+</style>
+    
+<script>
+    function info(){
+        let widthScren
+        let bodyy
+        let info = document.getElementById("mostrar");
+        bodyy=document.getElementById("body");
+        widthScren= screen.width;
+        let heigscren = screen.height;
+        let deepcolor = screen.colorDepth;
+        document.getElementById("mostrar").textContent= widthScren;
+        info.innerHTML = `Amplada: ${widthScren}px<br> Alçada: ${heigscren}px<br> Profundidad Color: ${deepcolor}`;
+
+        if(widthScren > 1200){
+            bodyy.style.background = "#123344";
+        }
+        else if(widthScren > 800){
+            bodyy.style.background = "#12ff44";
+        }
+        else{
+            bodyy.style.background = "#000000";
+        }
+    }
+    
+    info();
+    
+</script>
+</body>
+
+
+</html>

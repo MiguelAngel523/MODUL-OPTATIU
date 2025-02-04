@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objecte Document</h1>
+
+    <button onclick="mostrarmissatge()">Missatge</button>
+    <div id="contingut"></div>
+</body>
+
+<script>
+
+function mostrarmissatge() {
+    const missatges =[
+        "Hola, misa", "hello", "tercero", "cuarto"
+    ];
+
+    const nouParagraf = document.createElement("p");
+
+    nouParagraf.textContent= missatges[Math.floor(Math.random() * missatges.length)];
+    
+    document.getElementById("contingut").appendChild(nouParagraf);
+}
+
+</script>
+
+</html>

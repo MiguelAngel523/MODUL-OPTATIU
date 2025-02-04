@@ -10,7 +10,30 @@
         <h1>Calculadora de Mitjana</h1>
         <p>Introdueix números un per un. Escriu <bold>0</bold> per finalitzar i veure la mitjana</p>
         <p>Número: </p>
-        <input type="integer">
+        <input id="nume" type="number">
+        <p id="resultat">hj</p>
     </div>
+
+
+    <script>
+        let num;
+        num =parseint(document.getElementById("nume").value);
+        
+        let mitja = 0;
+        let cont = 0;
+        
+        while(num != 0)
+        {
+            document.addEventListener("keyup", (event) => {
+            if(event.key === "Enter"){
+                num = parseint(document.getElementById("nume").value);  
+                }     
+            });
+            if(num != 0)
+                cont++;
+            mitja += num;
+        }
+        resultat.innerText = `lA MITJANA ES ${mitja / cont}`;
+    </script>
 </body>
 </html>

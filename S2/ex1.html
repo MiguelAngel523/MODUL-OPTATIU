@@ -10,25 +10,20 @@
     <p>Introdueix la nota (0-10):</p>
     <input id="nota" type="number">
     <button onclick="Resultat()">Comprova</button>
+    <p id="result"> </p>
 
 
     <script>
-        var nota;
-        nota = document.getElementById("nota");
+        
         function Resultat()
         {
-            if(nota < 5){
-                alert("Aprovat");
-            }   
-            else{
-                alert("Suspés");
-            }
-                
+            let note
+            note = parseInt(document.getElementById("nota").value);
+            if(note >= 5)
+                result.innerText = `Has aprbt ${note}`;
+            else
+                result.innerText = `Has suspendido ${note}` ;
         }
-        
-
-
-    
     </script>
 </body>
 

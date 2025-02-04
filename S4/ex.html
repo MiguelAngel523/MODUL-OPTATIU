@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercici Window</h1>
+
+    <button onclick="mostrarmidas()">Mostrar Mides</button>
+    <button onclick="redirigeix()">Ir Google</button>
+</body>
+
+<script>
+onload = function(){
+    alert("Benvingut a la meva pagina");
+}
+
+function mostrarmidas() {
+    alert("amplada: " + innerWidth);
+    alert("alçada: " + innerHeight);
+}
+function redirigeix() {
+    location.href= "https://moodle.institutmontilivi.cat/my/courses.php";
+}
+
+</script>
+
+</html>
