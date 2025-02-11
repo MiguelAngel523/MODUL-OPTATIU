@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1</title>
+</head>
+<body>
+    <div>
+        <h1>Missatges d'informació</h1>
+    </div>
+        
+    <script>
+
+        function showMessage(missatge) {
+            let div = document.createElement("div");
+            div.style.width = "400px";
+            div.style.backgroundColor = "blue";
+            div.style.color = "white";
+            div.style.borderRadius = "15px";
+            div.style.padding = "10px";
+            div.textContent = missatge;
+            document.body.appendChild(div);
+        }
+        showMessage("Aquesta és una notificació informativa.");
+    </script>
+    
+</body>
+</html>

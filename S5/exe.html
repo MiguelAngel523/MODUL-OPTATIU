@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h4>Calculaora</h4>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button onclick="ferOpe('+')">+</button>
+        <button onclick="ferOpe('-')">-</button>
+        <button onclick="ferOpe('*')">x</button>
+        <button onclick="ferOpe('/')">/</button>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
+    <br>
+    <div>
+        <div>
+            <h4>Validar</h4>
+        </div>
+        <div>
+            <input type="text" id="nom">
+            <input type="text" id="correu">
+            <input type="number" id="edat">
+            <button onclick="Validar()">Validar</button>
+        </div>
+        <div>
+            <p id="mesage"></p>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h4 id="text">el texto</h4>
+            <button id="boto">canviar</button>
+        </div>
+        <div>
+            <h4 id="text1">el texto</h4>
+            <button id="boto1">canviar mida</button>
+        </div>
+        <div>
+            <h4></h4>
+        </div>
+        <div>
+            <h4></h4>
+        </div>
+        <div>
+            <h4></h4>
+        </div>
+    </div>
+
+    <script>
+        
+        function ferOpe(operator){
+            let num1= parseInt(document.getElementById("num1").value);
+            let num2= parseInt(document.getElementById("num2").value);
+            let resultat=0;
+            if (operator=== '+') resultat= num1+num2;
+            if (operator=== '-') resultat= num1-num2;
+            if (operator=== '*') resultat= num1*num2;
+            if (operator=== '/') resultat= num1/num2;
+            document.getElementById("result").textContent= resultat;
+        }
+
+        function Validar(){
+            let nom = document.getElementById("nom").value;
+            let correo = document.getElementById("correu").value;
+            let edat = parseInt(document.getElementById("edat").value)
+            let misatge ="";
+            if(!nom) misatge += "El campo de nombre esta vacio. ";
+            if(correo.includes("@") === false) misatge += "El correo no es valido. ";
+            if(edat <= 0 || !edat) misatge += "La edad tiene que ser un numero positivo. "
+            document.getElementById("mesage").textContent= misatge;
+        }
+        document.getElementById("boto").onclick = CanviaText;
+        function CanviaText(){
+            this.textContent = "El text canbiado";
+        }
+        document.getElementById("boto1").onclick = CambiarMida;
+        function CambiarMida(){
+            let mida = parseInt(window.getComputedStyle(this).fontSize);
+            this.style.fontSize = mida + 2 +"px";
+        }
+    </script>
+</body>
+</html>
